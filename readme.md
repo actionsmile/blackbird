@@ -7,9 +7,7 @@ This is the best way to pass events, as I see it :)
 ```as3
 var clientID : String = "SOME_UID";
 var autoCreate : Boolean = false; // If you pass TRUE create() method will be called in constructor
-var dispatcher : IEventDispatcher;
 
-this.dispatcher = new EventDisptahcer;
 this.mqtt = new MQTTSocket(clientID, autoCreate);
 
 if (!this.mqtt.connected) {
@@ -23,31 +21,14 @@ if (!this.mqtt.connected) {
 }
 
 private function onIncomingMessage(topic : String, message : String) : void {
-	switch(topic){
-		case "ufo/Bridge_Device_Reset/commands":
-			if(message == "all" || message == "cockpit") {
-				this.dispatcher.dispatchEvent(new GameEvent(GameEvent.RESET));
-			}
-			break;
-		case "ufo/Bridge_Cocpit_Game/commands":
-			if(message.toLowerCase() == "status" || message.toLowerCase() == "ping") {
-				this.mqtt.publish(<TOPIC_TO_PUBLISH>, <MESSAGE_TO_PUBLISH>);
-			} else if(message.toLowerCase() == "reset") {
-				this.dispatcher.dispatchEvent(new GameEvent(GameEvent.RESET));
-			}
-			break;
-		default:
-				break;
-	}
+	trace("Topic: " + topic + "\nMessage: " + message);
 }
 
 private function onConnectionEstablished() : void {
 	trace("Connected to '<HOST>:<PORT>'");
-	this.dispatcher.dispatchEvent(new MQTTEvent(MQTTEvent.CONNECTED));
 }
 
 private function onConnectionLost() : void {
 	trace("Connection lost");
-	this.dispatcher.dispatchEvent(new MQTTEvent(MQTTEvent.CLOSE));
 }
 ```
