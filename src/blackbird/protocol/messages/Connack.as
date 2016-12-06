@@ -2,7 +2,7 @@ package blackbird.protocol.messages {
 	import blackbird.protocol.impl.MQTT;
 
 	/**
-	 * @author Aziz Zaynutdinov (aziz.zaynutdinov at playstorm.com)
+	 * @author Aziz Zainutdin (hello at scriptor.me)
 	 */
 	public class Connack extends MQTT {
 		private var _status : uint;

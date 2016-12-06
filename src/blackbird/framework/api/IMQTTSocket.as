@@ -4,7 +4,7 @@ package blackbird.framework.api {
 	import playstorm.additional.api.IDisposable;
 
 	/**
-	 * @author Aziz Zaynutdinov (aziz.zaynutdinov at playstorm.com)
+	 * @author Aziz Zainutdin (hello at scriptor.me)
 	 */
 	public interface IMQTTSocket extends IDisposable {
 		function connect(host : String, port : uint = 1883, username : String = null, password : String = null) : void;

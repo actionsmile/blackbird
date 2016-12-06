@@ -1,6 +1,6 @@
 package blackbird.framework {
 	/**
-	 * @author Aziz Zaynutdinov (aziz.zaynutdinov at playstorm.com)
+	 * @author Aziz Zainutdin (hello at scriptor.me)
 	 */
 	public namespace mqtt = "http://ns.playstorm.com/mqtt/1.0";
 }

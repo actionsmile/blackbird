@@ -6,7 +6,7 @@ package blackbird.protocol.impl {
 	import flash.utils.IDataInput;
 
 	/**
-	 * @author Aziz Zaynutdinov (aziz.zaynutdinov at playstorm.com)
+	 * @author Aziz Zainutdin (hello at scriptor.me)
 	 */
 	public class MQTT extends ByteArray implements IMQTT {
 		/**

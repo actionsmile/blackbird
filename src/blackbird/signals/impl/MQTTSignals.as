@@ -5,7 +5,7 @@ package blackbird.signals.impl {
 	import org.osflash.signals.Signal;
 
 	/**
-	 * @author Aziz Zaynutdinov (aziz.zaynutdinov at playstorm.com)
+	 * @author Aziz Zainutdin (hello at scriptor.me)
 	 */
 	public class MQTTSignals implements IMQTTSignals {
 		/**

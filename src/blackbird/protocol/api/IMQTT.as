@@ -2,7 +2,7 @@ package blackbird.protocol.api {
 	import flash.utils.ByteArray;
 
 	/**
-	 * @author Aziz Zaynutdinov (aziz.zaynutdinov at playstorm.com)
+	 * @author Aziz Zainutdin (hello at scriptor.me)
 	 */
 	public interface IMQTT {
 		function writeType(value : uint) : void;

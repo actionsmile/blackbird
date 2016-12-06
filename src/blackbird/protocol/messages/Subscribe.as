@@ -4,7 +4,7 @@ package blackbird.protocol.messages {
 	import blackbird.protocol.types.MessageType;
 
 	/**
-	 * @author Aziz Zaynutdinov (aziz.zaynutdinov at playstorm.com)
+	 * @author Aziz Zainutdin (hello at scriptor.me)
 	 */
 	public class Subscribe extends MQTT {
 		public function Subscribe(topicname : String, messageID : int, QoS : int = 1) {

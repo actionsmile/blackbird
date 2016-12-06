@@ -22,7 +22,7 @@ package blackbird.framework.impl {
 	import flash.utils.Endian;
 
 	/**
-	 * @author Aziz Zaynutdinov (aziz.zaynutdinov at playstorm.com)
+	 * @author Aziz Zainutdin (hello at scriptor.me)
 	 */
 	public class MQTTSocket extends Object implements IMQTTSocket {
 		/**

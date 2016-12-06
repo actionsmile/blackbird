@@ -1,10 +1,10 @@
 package blackbird.signals.api {
-	import playstorm.additional.api.IDisposable;
+	import scriptro.additional.api.IDisposable;
 
 	import org.osflash.signals.ISignal;
 
 	/**
-	 * @author Aziz Zaynutdinov (aziz.zaynutdinov at playstorm.com)
+	 * @author Aziz Zainutdin (hello at scriptor.me)
 	 */
 	public interface IMQTTSignals extends IDisposable {
 		function get onConnect() : ISignal;

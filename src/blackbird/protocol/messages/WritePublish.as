@@ -4,7 +4,7 @@ package blackbird.protocol.messages {
 	import blackbird.protocol.types.MessageType;
 
 	/**
-	 * @author Aziz Zaynutdinov (aziz.zaynutdinov at playstorm.com)
+	 * @author Aziz Zainutdin (hello at scriptor.me)
 	 */
 	public class WritePublish extends MQTT {
 		public function WritePublish(topic : String, message : String, messageID : int, QoS : int = 1, retain : int = 0) {

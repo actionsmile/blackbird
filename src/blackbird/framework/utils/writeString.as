@@ -4,7 +4,7 @@ package blackbird.framework.utils {
 	import flash.utils.ByteArray;
 
 	/**
-	 * @author Aziz Zaynutdinov (aziz.zaynutdinov at playstorm.com)
+	 * @author Aziz Zainutdin (hello at scriptor.me)
 	 */
 	public function writeString(bytes : ByteArray, string : String) : void {
 		var len : int = string.length;

@@ -7,7 +7,7 @@ package blackbird.protocol.impl {
 	import flash.utils.Timer;
 
 	/**
-	 * @author Aziz Zaynutdinov (aziz.zaynutdinov at playstorm.com)
+	 * @author Aziz Zainutdin (hello at scriptor.me)
 	 */
 	public class KeepAliveTimer extends Object implements IKeepAliveTimer {
 		/**
