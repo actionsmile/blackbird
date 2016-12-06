@@ -32,3 +32,7 @@ private function onConnectionLost() : void {
 	trace("Connection lost");
 }
 ```
+
+---
+### LICENSE
+[MIT](https://github.com/actionsmile/blackbird/blob/master/LICENSE.md)
