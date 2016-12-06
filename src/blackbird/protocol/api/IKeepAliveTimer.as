@@ -2,7 +2,7 @@ package blackbird.protocol.api {
 	import playstorm.additional.api.IDisposable;
 
 	/**
-	 * @author Aziz Zaynutdinov (aziz.zaynutdinov at playstorm.com)
+	 * @author Aziz Zainutdin (hello at scriptor.me)
 	 */
 	public interface IKeepAliveTimer extends IDisposable {
 		function start() : void;

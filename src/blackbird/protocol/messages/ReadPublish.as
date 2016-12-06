@@ -6,7 +6,7 @@ package blackbird.protocol.messages {
 	import flash.utils.getTimer;
 
 	/**
-	 * @author Aziz Zaynutdinov (aziz.zaynutdinov at playstorm.com)
+	 * @author Aziz Zainutdin (hello at scriptor.me)
 	 */
 	public class ReadPublish extends MQTT {
 		private var _topicName : String;
