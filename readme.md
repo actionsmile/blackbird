@@ -1,5 +1,5 @@
 ![Blackbird][title_image]
-# [Blackbird. AS3 MQTT framework][blackbird]
+# [Blackbird. Actionscript 3.0 MQTT framework][blackbird]
 
 ### Requirement
 [as3signals][signals]
