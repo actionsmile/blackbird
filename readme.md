@@ -1,6 +1,6 @@
 ![Blackbird][title_image]
 # [Blackbird. AS3 MQTT framework][blackbird]
----
+
 ### Requirement
 [as3signals][signals]
 This is the best way to pass events, as I see it :)
