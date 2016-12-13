@@ -11,7 +11,7 @@ package blackbird.framework.impl {
 	import blackbird.signals.api.IMQTTSignals;
 	import blackbird.signals.impl.MQTTSignals;
 
-	import robotlegs.bender.framework.impl.UID;
+	import scriptor.utils.UID;
 
 	import org.osflash.signals.natives.sets.SocketSignalSet;
 
