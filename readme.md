@@ -1,7 +1,8 @@
-# Blackbird. AS3 MQTT framework
+![Blackbird][title_image]
+# [Blackbird. AS3 MQTT framework][blackbird]
 ---
 ### Requirement
-[as3signals](https://github.com/robertpenner/as3-signals)
+[as3signals][signals]
 This is the best way to pass events, as I see it :)
 ### Usage
 ```as3
@@ -35,4 +36,9 @@ private function onConnectionLost() : void {
 
 ---
 ### LICENSE
-[MIT](https://github.com/actionsmile/blackbird/blob/master/LICENSE.md)
+[MIT][license]
+
+[title_image]: https://dl.dropboxusercontent.com/u/41163165/readme_title.png
+[blackbird]: http://blackbird.scriptor.me
+[signals]: https://github.com/robertpenner/as3-signals
+[license]: https://github.com/actionsmile/blackbird/blob/master/LICENSE.md
