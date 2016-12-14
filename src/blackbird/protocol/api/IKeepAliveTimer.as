@@ -1,5 +1,5 @@
 package blackbird.protocol.api {
-	import playstorm.additional.api.IDisposable;
+	import scriptor.additional.api.IDisposable;
 
 	/**
 	 * @author Aziz Zainutdin (hello at scriptor.me)

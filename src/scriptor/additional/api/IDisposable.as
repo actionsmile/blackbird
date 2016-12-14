@@ -3,11 +3,11 @@ package scriptor.additional.api {
 		/**
 		 * Creates all environment for the instance of an object
 		 */
-		function create();
+		function create() : void;
 
 		/**
 		 * Prepares an object to dispose
 		 */
-		function dispose();
+		function dispose() : void;
 	}
 }

@@ -1,6 +1,5 @@
 package blackbird.framework.impl {
 	import blackbird.framework.api.IMQTTSocket;
-	import blackbird.framework.mqtt;
 	import blackbird.protocol.api.IDataParser;
 	import blackbird.protocol.api.IKeepAliveTimer;
 	import blackbird.protocol.impl.DataParser;
@@ -73,7 +72,6 @@ package blackbird.framework.impl {
 		 * @private
 		 */
 		private var _messageID : int = 0;
-		mqtt var connected : Boolean;
 
 		public function MQTTSocket(clientUID : String = null, autoCreate : Boolean = true) {
 			this.clientID = clientUID || UID.create(this);
@@ -229,7 +227,6 @@ package blackbird.framework.impl {
 				this.socket.flush();
 				connection.clear();
 				connection = null;
-				mqtt::connected = true;
 			}
 		}
 
@@ -276,8 +273,7 @@ package blackbird.framework.impl {
 		}
 
 		public function get connected() : Boolean {
-			var result : Boolean = mqtt::connected;
-			return result;
+			return this.isConnected;
 		}
 	}
 }

@@ -1,7 +1,7 @@
 package blackbird.framework.api {
 	import blackbird.signals.api.IMQTTSignals;
 
-	import playstorm.additional.api.IDisposable;
+	import scriptor.additional.api.IDisposable;
 
 	/**
 	 * @author Aziz Zainutdin (hello at scriptor.me)

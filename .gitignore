@@ -29,6 +29,7 @@ Icon*
 .fxpProperties
 
 user.properties
+local.properties
 Icon
 Thumbs.db
 .DS_Store
