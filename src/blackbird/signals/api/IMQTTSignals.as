@@ -1,5 +1,5 @@
 package blackbird.signals.api {
-	import scriptro.additional.api.IDisposable;
+	import scriptor.additional.api.IDisposable;
 
 	import org.osflash.signals.ISignal;
 
