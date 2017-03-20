@@ -75,7 +75,7 @@ OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 
-[title_image]: https://photos-1.dropbox.com/t/2/AAAV7OR2ynXNEBth2hn4jSt0uOi71sBdbgmzIpKztYmXCQ/12/41163165/png/32x32/1/_/1/2/readme_title.png/EM2Ytx8YwKIBIAIoAg/YSyNZqukx_pGzykD5g9JSb3qHqvRCdZrFszdrnSStS0
+[title_image]: https://www.dropbox.com/s/zvbde0a58rgxnjm/readme_title.png
 [blackbird]: http://blackbird.scriptor.me
 [signals]: https://github.com/robertpenner/as3-signals
 [license]: https://github.com/actionsmile/blackbird/blob/master/LICENSE.md
