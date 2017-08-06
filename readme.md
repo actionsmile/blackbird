@@ -1,4 +1,6 @@
-![Blackbird][title_image] [![Build Status](https://travis-ci.org/actionsmile/blackbird.svg?branch=master)](https://travis-ci.org/actionsmile/blackbird)
+![Blackbird][title_image]
+
+[![Build Status](https://travis-ci.org/actionsmile/blackbird.svg?branch=master)](https://travis-ci.org/actionsmile/blackbird)
 
 ---
 ### INSTALLATION
