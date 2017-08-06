@@ -43,4 +43,5 @@ before_script:
     - chmod +x flex_sdk/bin/mxmlc
 
 script:
-    - cd ant
+    - ant
+    - cd ../gradle && gradle
