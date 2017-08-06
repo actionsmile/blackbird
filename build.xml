@@ -72,7 +72,7 @@
   </target>
 
 <!-- Package the Build -->
-  <target name="package" depends="asdoc">
+  <target name="package" depends="compile">
     <tstamp>
       <format property="touch.time" pattern="MM/dd/yyyy hh:mm aa" unit="hour"/>
     </tstamp>
