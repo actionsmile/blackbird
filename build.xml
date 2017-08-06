@@ -92,14 +92,6 @@
     <copy todir="${dist.loc}/docs">
       <fileset dir="${doc.loc}"/>
     </copy>
-    <delete dir="${dist.loc}/docs/tempdita"/>
-<!-- Add ASDoc xml to swc for Flex Builder Tooltips -->
-    <zip destfile="${dist.loc}/bin/${project.name.versioned}.swc" update="true">
-      <zipfileset dir="${doc.loc}/tempdita" prefix="docs">
-        <include name="*packages.dita*"/>
-        <include name="*blackbird.*"/>
-      </zipfileset>
-    </zip>
 
 <!-- Copy LICENSE  -->
     <copy file="LICENSE" tofile="${dist.loc}/license.txt" overwrite="true"/>
