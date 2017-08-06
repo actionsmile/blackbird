@@ -18,9 +18,7 @@
     <echo message=""/>
     <echo message="Available targets are:"/>
     <echo message=""/>
-    <echo message="test          --&gt; Build blackbird SWC and run unit tests"/>
-    <echo message="asdoc         --&gt; Build blackbird SWC, test, and generate asdocs"/>
-    <echo message="package       --&gt; Build blackbird SWC, test, and create release zip"/>
+    <echo message="package       --&gt; Build blackbird SWC and create release zip"/>
     <echo message="compile       --&gt; Build blackbird SWC"/>
     <echo message="clean         --&gt; Remove all folders created by build script"/>
     <echo message="init          --&gt; Clean and create build folders"/>
@@ -72,56 +70,7 @@
     </java>
     <echo>[compile] Release SWC ${project.name.versioned}.swc created successfully</echo>
   </target>
-<!-- Run Unit Tests -->
-  <target name="test" depends="compile">
-    <echo>[test] Running Unit Tests</echo>
-<!-- Compile TestRunner.mxml as a SWF -->
-    <java jar="${FLEX_HOME}/lib/mxmlc.jar" dir="${FLEX_HOME}/frameworks" fork="true" failonerror="true">
-      <arg value="${test.src.loc}/blackbirdTest.mxml"/>
-      <arg value="-source-path=${main.src.loc}"/>
-<!-- Flash those sweet legs. Blink and you'll miss 'em. -->
-      <arg value="-output=${bin.loc}/TestRunner.swf"/>
-      <arg value="-default-size=200,200"/>
-      <arg value="-default-background-color=0x000000"/>
-<!-- Include classes from SWCs in this folder, but only the ones we use. -->
-      <arg value="-library-path+=${lib.loc}"/>
-<!-- So true. -->
-      <arg value="-incremental=true"/>
-      <arg value="-verbose-stacktraces=true"/>
-      <arg value="-headless-server=false"/>
-      <arg value="-debug=true"/>
-    </java>
-<!-- Execute TestRunner.swf as FlexUnit tests and publish reports -->
-    <flexunit swf="bin/TestRunner.swf" toDir="${report.loc}" haltonfailure="true" verbose="true" localTrusted="true"/>
-<!-- Generate readable JUnit-style reports -->
-    <junitreport todir="${report.loc}">
-      <fileset dir="${report.loc}">
-        <include name="TEST-*.xml"/>
-      </fileset>
-      <report format="frames" todir="${report.loc}/html"/>
-    </junitreport>
-    <echo>[test] Finished running Unit Tests</echo>
-  </target>
-<!-- Build Documentation -->
-  <target name="asdoc" depends="compile">
-    <echo>[asdoc] Generating ASDOC documentation</echo>
-    <tstamp>
-      <format property="docgen.time" pattern="MM/dd/yyyy hh:mm aa" unit="hour"/>
-    </tstamp>
-    <java jar="${FLEX_HOME}/lib/asdoc.jar" dir="${FLEX_HOME}/frameworks" fork="true" failonerror="true">
-      <arg line="-external-library-path+='${lib.loc}'"/>
-      <arg line="-doc-sources+='${main.src.loc}'"/>
-      <arg line="-source-path+='${main.src.loc}'"/>
-      <arg line="-output '${doc.loc}'"/>
-      <arg value="-keep-xml=true"/>
-      <arg value="-lenient=true"/>
-      <arg line="-window-title 'blackbird ${blackbird.ver.num}'"/>
-      <arg line="-main-title 'blackbird ${blackbird.ver.num}'"/>
-      <arg line="-footer 'blackbird - http://blackbird.scriptor.me/ - Documentation generated at: ${docgen.time}'"/>
-      <arg line="-package blackbird.framework.api 'Framework API'"/>
-    </java>
-    <echo>[asdoc] ASDOC documentation generated successfully</echo>
-  </target>
+
 <!-- Package the Build -->
   <target name="package" depends="asdoc">
     <tstamp>
@@ -151,20 +100,9 @@
         <include name="*blackbird.*"/>
       </zipfileset>
     </zip>
-<!-- Copy README  -->
-    <copy file="${template.loc}/README.tmpl" tofile="${dist.loc}/readme.txt" overwrite="true">
-      <filterchain>
-        <replacetokens>
-          <token key="date" value="${touch.time}"/>
-          <token key="blversion" value="${blackbird.ver.num}"/>
-          <token key="releasename" value="${project.name.versioned}"/>
-        </replacetokens>
-      </filterchain>
-    </copy>
+
 <!-- Copy LICENSE  -->
-    <copy file="LICENSE.md" tofile="${dist.loc}/license.txt" overwrite="true"/>
-<!-- Copy CHANGELOG  -->
-    <copy file="changelog.md" tofile="${dist.loc}/changelog.txt" overwrite="true"/>
+    <copy file="LICENSE" tofile="${dist.loc}/license.txt" overwrite="true"/>
 <!-- Zip It  -->
     <zip destfile="${dist.loc}/${project.name.versioned}.zip">
       <fileset dir="${dist.loc}"/>
