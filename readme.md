@@ -12,7 +12,7 @@ The SWC file should be enough to get started. Simply drop it in your projects li
 ---
 ### BUILDING
 
-In addition to the SWC file in this distribution package, the Blacknird vv1.0.4 source code is also provided.
+In addition to the SWC file in this distribution package, the Blackbird v1.0.4 source code is also provided.
 
 The source code is dependent on the [as3signals][signals] library.
 
